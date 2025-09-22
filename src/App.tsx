@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
 import './App.css'
 import Todo from './Todo'
+import Tasks from './Tasks'
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -32,6 +34,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/todo" element={<Todo />} />
+          <Route path="/task" element={<Tasks />} />
 
         </Routes>
       </Router>
