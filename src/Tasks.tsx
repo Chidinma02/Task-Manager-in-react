@@ -202,7 +202,15 @@ const Tasks = () => {
                             key={todo.id}
                             className="flex justify-between items-center p-2 py-5 border border-gray-200 rounded-lg p-4 shadow-sm bg-green-100 rounded"
                         >
-                            <span className="line-through text-gray-600">{todo.task}</span>
+                            <div>
+                                <span className="line-through text-gray-600">{todo.task}</span>
+                                <div className="mt-4 text-yellow-500  flex items-center gap-2">
+                                    <FaRegCalendarAlt className="text-yellow-500" />
+                                    <span>{dayjs(todo.updated_at).format("DD-MM-YYYY")}</span>
+
+                                </div>
+                            </div>
+
                             <div className="space-x-2">
                                 <button
                                     onClick={() => handleToggle(todo.id, todo.completed)}
